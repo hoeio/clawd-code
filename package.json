@@ -4,6 +4,14 @@
   "description": "Unofficial fan-made companion window for Claude Code sessions",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoeio/clawd-code.git"
+  },
+  "homepage": "https://github.com/hoeio/clawd-code#readme",
+  "bugs": {
+    "url": "https://github.com/hoeio/clawd-code/issues"
+  },
   "bin": {
     "clawd-companion": "dist/clawd.js"
   },

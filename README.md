@@ -10,6 +10,8 @@ Coding alone with an AI all day is quiet. Clawd Companion gives that AI a face. 
 
 The idea: Clawd *is* the Claude writing your code. The terminal is its hands; this window is its mouth.
 
+Inspired by [@agentmorphy](https://www.instagram.com/agentmorphy/) on Instagram, where a solo founder vibe-codes a startup with Claude as his only companion.
+
 > **Unofficial fan project.** Not affiliated with, endorsed by, or supported by Anthropic. Non-commercial.
 >
 > **Who does what:** everything Clawd says comes from a separate LLM (your own API key) that only *watches* the session. There are no scripted lines. **Only Claude Code changes your code.** The companion's file access is read-only.
