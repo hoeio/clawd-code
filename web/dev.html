@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clawd Dev</title>
+<link rel="stylesheet" href="/clawd.css">
+<style>
+  main { max-width: 720px; margin: 0 auto; padding: 16px; display: grid; gap: 12px; }
+  .stage { aspect-ratio: 1 / 1; max-height: 62vh; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  button, input[type=text] { font: inherit; padding: 8px 12px; border-radius: 10px; border: 1px solid var(--line); background: var(--panel); color: var(--ink); }
+  button[aria-pressed="true"] { outline: 2px solid var(--accent); }
+  input[type=text] { flex: 1 1 200px; min-width: 0; }
+  input[type=range] { flex: 1 1 160px; accent-color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <div class="stage" id="stage"></div>
+  <div class="row" id="states"></div>
+  <div class="row"><input type="text" id="text" value="This run should pass. Probably."><button id="say">say</button></div>
+  <div class="row"><label for="amp">amplitude</label><input type="range" id="amp" min="0" max="100" value="0"></div>
+</main>
+<script type="module" src="/dist/dev.js"></script>
+</body>
+</html>

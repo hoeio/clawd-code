@@ -1,0 +1,8 @@
+node_modules
+dist
+web/dist
+.claude/settings.local.json
+graft/
+.DS_Store
+*.log
+CLAUDE.md

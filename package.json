@@ -1,0 +1,43 @@
+{
+  "name": "clawd-companion",
+  "version": "0.1.0",
+  "description": "Unofficial fan-made companion window for Claude Code sessions",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "clawd-companion": "dist/clawd.js"
+  },
+  "files": [
+    "dist/clawd.js",
+    "hooks",
+    "web/index.html",
+    "web/dev.html",
+    "web/clawd.css",
+    "web/dist"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "build": "npm run build:cli && npm run build:web",
+    "build:web": "esbuild web/src/main.ts web/src/dev.ts --bundle --minify --format=esm --outdir=web/dist",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p web",
+    "test": "node --test test/*.test.ts",
+    "prepublishOnly": "npm run build && npm test",
+    "build:cli": "esbuild src/cli.ts --bundle --platform=node --format=esm --target=node22 --minify --outfile=dist/clawd.js --banner:js=\"import { createRequire as __cr } from 'node:module'; const require = __cr(import.meta.url);\""
+  },
+  "devDependencies": {
+    "@types/node": "^24.19.1",
+    "@types/three": "^0.186.0",
+    "esbuild": "^0.28.2",
+    "three": "^0.186.1",
+    "typescript": "^5.9.3",
+    "@anthropic-ai/sdk": "^0.131.0"
+  },
+  "keywords": [
+    "claude-code",
+    "companion",
+    "hooks",
+    "clawd"
+  ]
+}
